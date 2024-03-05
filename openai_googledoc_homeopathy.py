@@ -3,7 +3,7 @@ import os
 
 from langchain import OpenAI
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = ''
 
 
 def get_list_homeopathy():
