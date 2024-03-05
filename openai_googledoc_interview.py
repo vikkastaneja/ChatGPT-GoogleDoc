@@ -12,13 +12,13 @@ def get_gdocs_interview():
 
 # from langchain import OpenAI
 
-# os.environ['OPENAI_API_KEY'] = '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'
+# os.environ['OPENAI_API_KEY'] = ''
 
 # from llama_index import download_loader
 
 # GoogleDocsReader = download_loader('GoogleDocsReader')
 
-# gdoc_ids = ['1-yln-nvNg5nZnxdRz-AU1GiuYBRKxs3S','1T8i-QForzzHknuVYWg9vv-hrtljBiU5BzV0w34mJwQM','19tPSQoY5nkSelaIYVG4Im9xlkplJawY_4h6KOe_ores','1qSTt760sZssHt3NvO0AK4ldKU1zk4ck_9qqXFbMCo_8','1-yln-nvNg5nZnxdRz-AU1GiuYBRKxs3S','1W77axRut06W3Q6P2ZJEKnsqgqfzSi4nX85i5dkdC9S4','1tjfVioaxg5R207dvhZixbNucZ9KS03ak','1El493js5sGU8Z70jU4ErC_wnDSNp7sC3','1R2jHroidNcvv-3Gv4qHhBXtlep-lTngb3iNoLFgIcoc','1cyONI6-anmxsY3gwZJ84DWmAKUrqTCQt','1KKPR3tFuqjxhcbnb7sykt8EqP28DkiuxJz--M1oaKtM','16hGr5KS1GewPVj1X2OZYjR9qPLQK67oQHt6fvwW1v8s','1xSRuUvXbdW5mTZR0okQHSHZ9HoKldja5zEPIUgL20p8','1NZso_nGS8KGwQ-gWlF50vSpMsCHaIklF','1fVBkfZuGwdJO726nbxFkEB2XpAxmgd2k','1b24hD_Ty2UaqZHIOw860QpzDHBOphVF6C-7otlcOLrQ','141LPuyfM_qFm2LmFlSD-twBCWGDbtkfM','1G3eLqHUDDP6BVFUHPSlE0BbLXTtcVg_wbpUdksi309s','1IbUkovafWQVvvSVCK1n_L5UptlaVJQmsPW70ScPOsJc','1VoDalpJSOYQ2fo6VXnTkgPLFcbUaMoqZWqqpkXw5AHQ','1M7vp1re49i6dVleIFVw4bRbeS2PCbQ8kgJcMtc2pNUQ','1JjhwOspwu14MfEJS1iL9a5ZO6_arWpCZba6G0xWz4m4','1QjFoVWEPGHoLXhOJvYM38OBbeYqWzOd7jcdqsSddFTo','1t-z7HRPcwui0rO0IRsq3oEy9IdwsSagZSdGSLZ5aQxw','1zVPxSJLSW_BmIQECr5_L4qUhLulY5RqjJil4i3ZYeTk','1KJRb4LKEU8KEkCm0qJK09DRqPt6XT4A8_cGZIk1vGy4']
+# gdoc_ids = ['1-yln-nvNg5nZnxdRz-AU1GiuYBRKxs3S1T8i-QForzzHknuVYWg9vv-hrtljBiU5BzV0w34mJwQM','19tPSQoY5nkSelaIYVG4Im9xlkplJawY_4h6KOe_ores','1qSTt760sZssHt3NvO0AK4ldKU1zk4ck_9qqXFbMCo_8','1-yln-nvNg5nZnxdRz-AU1GiuYBRKxs3S','1W77axRut06W3Q6P2ZJEKnsqgqfzSi4nX85i5dkdC9S4','1tjfVioaxg5R207dvhZixbNucZ9KS03ak','1El493js5sGU8Z70jU4ErC_wnDSNp7sC3','1R2jHroidNcvv-3Gv4qHhBXtlep-lTngb3iNoLFgIcoc','1cyONI6-anmxsY3gwZJ84DWmAKUrqTCQt','1KKPR3tFuqjxhcbnb7sykt8EqP28DkiuxJz--M1oaKtM','16hGr5KS1GewPVj1X2OZYjR9qPLQK67oQHt6fvwW1v8s','1xSRuUvXbdW5mTZR0okQHSHZ9HoKldja5zEPIUgL20p8','1NZso_nGS8KGwQ-gWlF50vSpMsCHaIklF','1fVBkfZuGwdJO726nbxFkEB2XpAxmgd2k','1b24hD_Ty2UaqZHIOw860QpzDHBOphVF6C-7otlcOLrQ','141LPuyfM_qFm2LmFlSD-twBCWGDbtkfM','1G3eLqHUDDP6BVFUHPSlE0BbLXTtcVg_wbpUdksi309s','1IbUkovafWQVvvSVCK1n_L5UptlaVJQmsPW70ScPOsJc','1VoDalpJSOYQ2fo6VXnTkgPLFcbUaMoqZWqqpkXw5AHQ','1M7vp1re49i6dVleIFVw4bRbeS2PCbQ8kgJcMtc2pNUQ','1JjhwOspwu14MfEJS1iL9a5ZO6_arWpCZba6G0xWz4m4','1QjFoVWEPGHoLXhOJvYM38OBbeYqWzOd7jcdqsSddFTo','1t-z7HRPcwui0rO0IRsq3oEy9IdwsSagZSdGSLZ5aQxw','1zVPxSJLSW_BmIQECr5_L4qUhLulY5RqjJil4i3ZYeTk','1KJRb4LKEU8KEkCm0qJK09DRqPt6XT4A8_cGZIk1vGy4']
 # loader = GoogleDocsReader()
 # docs = loader.load_data(document_ids=gdoc_ids)
 
