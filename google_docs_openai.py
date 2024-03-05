@@ -5,7 +5,7 @@ from llama_index.core import VectorStoreIndex, download_loader
 
 from llama_index.readers.google import GoogleDocsReader
 import os
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = ''
 gdoc_ids = ['1E0LlSJEZiKbqNCPEJbPJeT_vJRwkGe4BQIIbDPuthDI','14o0DXjMiwBqryCxkDBuvZ1jRLqOlSibFm_9jEMNVzAY','16jUwKHwKStHQuI0m4WNwuH6_euEri9Zc2V6sWFBeIeo','1rZ3yIA-XIUa7r3vl9l3Q-m_DgtC8w9er_-vdvDlOO2s','10x6_RGFImD1OXapJDeFWVeP9kfHdCuflcN7CPWzf3ik']
 
 option = input('If your question is for interview, press 1, for homeopathy, press 2\n')
