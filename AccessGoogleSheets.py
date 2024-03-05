@@ -4,8 +4,8 @@ from llama_index import download_loader
 
 # Replace with your own credentials
 credentials = {
-    "client_id": "174768535960-m46np79r95nrl53g2s4ik9mk03usfc7n.apps.googleusercontent.com",
-    "client_secret": "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",
+    "client_id": ".apps.googleusercontent.com",
+    "client_secret": "",
     # "refresh_token": "YOUR_REFRESH_TOKEN",
 }
 
