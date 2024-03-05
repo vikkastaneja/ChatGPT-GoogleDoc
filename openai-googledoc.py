@@ -12,7 +12,7 @@ import os
 # from llama_index.readers.google import GoogleSheetsReader
 # from langchain import OpenAI
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = ''
 import logging
 import sys
 
@@ -37,7 +37,7 @@ display(Markdown(f"<b>{response}</b>"))
 
 # from langchain import OpenAI
 
-# os.environ['OPENAI_API_KEY'] = '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'
+# os.environ['OPENAI_API_KEY'] = ''
 
 # from llama_index import download_loader
 
@@ -109,7 +109,7 @@ def filter_lists():
 
 def fetch_documents():
 	# filtered_list = filter_lists()
-	os.environ['OPENAI_API_KEY'] = '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'
+	os.environ['OPENAI_API_KEY'] = ''
 	# GoogleDocsReader = download_loader('GoogleDocsReader')
 	# loader = GoogleDocsReader()
 	# gdoc_ids = filtered_list['doc']
