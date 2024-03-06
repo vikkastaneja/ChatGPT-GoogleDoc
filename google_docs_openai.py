@@ -1,3 +1,4 @@
+# https://docs.llamaindex.ai/en/stable/examples/data_connectors/GoogleDocsDemo.html
 from openai_googledoc_homeopathy import get_list_homeopathy
 from openai_googledoc_interview import get_gdocs_interview
 

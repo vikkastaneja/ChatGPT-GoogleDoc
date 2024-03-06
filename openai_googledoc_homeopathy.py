@@ -1,9 +1,9 @@
 # from llama_index import GPTSimpleVectorIndex, Document, SimpleDirectoryReader, LLMPredictor, PromptHelper, ServiceContext
-import os
+# import os
 
-from langchain import OpenAI
+# from langchain import OpenAI
 
-os.environ['OPENAI_API_KEY'] = ''
+# os.environ['OPENAI_API_KEY'] = ''
 
 
 def get_list_homeopathy():

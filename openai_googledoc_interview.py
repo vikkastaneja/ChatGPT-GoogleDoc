@@ -50,41 +50,41 @@ def get_gdocs_interview():
 
 
 
-def filter_lists():
-	li = get_list_of_docs()
-	docs = []
-	sheets = []
-	pdfs = []
-	slides = []
-	for index in li:
-		print(index)
-		match(index.get('File-Type')):
-			case 'application/pdf':
-				print('pdf')
-				pdfs.append(index.get('File-Id'))
-			case 'application/vnd.google-apps.document':
-				print('doc')
-				docs.append(index.get('File-Id'))
-			case 'application/vnd.google-apps.presentation':
-				print('slides')
-				slides.append(index.get('File-Id'))
-			case 'application/vnd.google-apps.spreadsheet':
-				print('sheets')
-				sheets.append(index.get('File-Id'))
+# def filter_lists():
+# 	li = get_list_of_docs()
+# 	docs = []
+# 	sheets = []
+# 	pdfs = []
+# 	slides = []
+# 	for index in li:
+# 		print(index)
+# 		match(index.get('File-Type')):
+# 			case 'application/pdf':
+# 				print('pdf')
+# 				pdfs.append(index.get('File-Id'))
+# 			case 'application/vnd.google-apps.document':
+# 				print('doc')
+# 				docs.append(index.get('File-Id'))
+# 			case 'application/vnd.google-apps.presentation':
+# 				print('slides')
+# 				slides.append(index.get('File-Id'))
+# 			case 'application/vnd.google-apps.spreadsheet':
+# 				print('sheets')
+# 				sheets.append(index.get('File-Id'))
 
 
-	filtered_list = {}
+# 	filtered_list = {}
 
-	filtered_list['pdf'] = pdfs
-	filtered_list['sheet']= sheets
-	filtered_list['slide'] = slides
-	filtered_list['doc'] = docs
-	return filtered_list
+# 	filtered_list['pdf'] = pdfs
+# 	filtered_list['sheet']= sheets
+# 	filtered_list['slide'] = slides
+# 	filtered_list['doc'] = docs
+# 	return filtered_list
 
 
-def fetch_documents():
+# def fetch_documents():
 	# filtered_list = filter_lists()
-	os.environ['OPENAI_API_KEY'] = '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'
+	# os.environ['OPENAI_API_KEY'] = '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'
 	# GoogleDocsReader = download_loader('GoogleDocsReader')
 	# loader = GoogleDocsReader()
 	# gdoc_ids = filtered_list['doc']
@@ -121,19 +121,19 @@ def fetch_documents():
 	Additional code as VectorStoreIndex is not the correct way due to an update
 	'''
 
-	from llama_index.core import StorageContext, load_index_from_storage
-	storage_context = StorageContext.from_defaults(persist_dir="./")
-	index = load_index_from_storage(storage_context)
+	# from llama_index.core import StorageContext, load_index_from_storage
+	# storage_context = StorageContext.from_defaults(persist_dir="./")
+	# index = load_index_from_storage(storage_context)
 
-	# Querying the index
-	to_continue = True
-	while (to_continue):
-		question = input('What is your question?\n')
-		response = index.query(question)
-		print(response)
-		answer = input('Do you want to ask more questions? - y/n\n')
-		if (answer == 'n'):
-			to_continue = False;
+	# # Querying the index
+	# to_continue = True
+	# while (to_continue):
+	# 	question = input('What is your question?\n')
+	# 	response = index.query(question)
+	# 	print(response)
+	# 	answer = input('Do you want to ask more questions? - y/n\n')
+	# 	if (answer == 'n'):
+	# 		to_continue = False;
 
 
 # fetch_documents()
