@@ -6,6 +6,20 @@ from llama_index.core import VectorStoreIndex, download_loader
 
 from llama_index.readers.google import GoogleDocsReader
 import os
+import sys
+
+def remove_token_json():
+    os.remove('token.json')
+
+
+delete_token = False
+
+if (len(sys.argv) > 1 and sys.argv[1] == 'true'):
+    delete_token = True
+
+if (delete_token):
+    remove_token_json()
+
 os.environ['OPENAI_API_KEY'] = ''
 gdoc_ids = ['1E0LlSJEZiKbqNCPEJbPJeT_vJRwkGe4BQIIbDPuthDI','14o0DXjMiwBqryCxkDBuvZ1jRLqOlSibFm_9jEMNVzAY','16jUwKHwKStHQuI0m4WNwuH6_euEri9Zc2V6sWFBeIeo','1rZ3yIA-XIUa7r3vl9l3Q-m_DgtC8w9er_-vdvDlOO2s','10x6_RGFImD1OXapJDeFWVeP9kfHdCuflcN7CPWzf3ik']
 
@@ -19,7 +33,10 @@ else:
 
 loader = GoogleDocsReader()
 documents = loader.load_data(document_ids=gdoc_ids)
-index = VectorStoreIndex.from_documents(documents)
+# import pdb; pdb.set_trace();
+index = VectorStoreIndex.from_documents(documents, show_progress=True)
+print(f'-----------{type(index)}')
+
 query_engine = index.as_query_engine()
 # print(query_engine.query("1:1?"))
 
@@ -31,3 +48,5 @@ while (to_continue):
     answer = input('Do you want to ask more questions? - y/n\n')
     if (answer == 'n'):
         to_continue = False
+
+
